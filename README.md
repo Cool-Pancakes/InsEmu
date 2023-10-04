@@ -1,12 +1,12 @@
-# stunning-happiness
+# InsEmu
 
 Emulate all kinds of things!
 
 Enter these commands in terminal to start!
 
-git clone https://github.com/Cool-Pancakes/insWine
+git clone https://github.com/Cool-Pancakes/InsEmu
 
-chmod 755 insWine/installer.sh
+chmod 755 InsEmu/installer.sh
 
 ./insWine/installer.sh
 
