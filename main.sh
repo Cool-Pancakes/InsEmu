@@ -13,6 +13,9 @@ sudo apt update -y
 sudo apt install --install-recommends winehq-stable winbind
 winecfg
 sudo apt install nemo
+echo "Succsefully Completed!"
+./InsEmu/main.sh
 else [[ $ans1 -eq 2 ]]
   echo "Please type one of the listed items"]
+  ./InsEmu/main.sh
 fi
