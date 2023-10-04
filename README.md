@@ -8,11 +8,15 @@ Emulate all kinds of things!
 Enter these commands in terminal to start!
 
 
-git clone https://github.com/Cool-Pancakes/InsEmu
 
-chmod 755 InsEmu/main.sh
+  git clone https://github.com/Cool-Pancakes/InsEmu
+Creating the file ^
 
-./InsEmu/main.sh
+  chmod 755 InsEmu/main.sh
+Making it runnable ^
+
+  ./InsEmu/main.sh
+ ^ Opening it. You can run this anytime to access the main page.
 
 (when it says Do you want to continue? [Y/n], click enter)
 
