@@ -16,6 +16,6 @@ sudo apt install nemo
 echo "Succsefully Completed!"
 ./InsEmu/main.sh
 else [[ $ans1 -eq 2 ]]
-  echo "Please type one of the listed items"]
+  echo "Please type one of the listed items"
   ./InsEmu/main.sh
 fi
