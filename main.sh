@@ -9,14 +9,14 @@ read ans1
 if [[ $ans1 -eq 1 ]]
 then
   sudo dpkg --add-architecture i386
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo apt-key add winehq.key
-echo "deb https://dl.winehq.org/wine-builds/debian/ bullseye main" | sudo tee /etc/apt/sources.list.d/wine_chrome_os_made_simple.list
-sudo apt update -y
-sudo apt install --install-recommends winehq-stable winbind
-winecfg
-sudo apt install nemo
-echo "Succsefully Completed!"
+  wget -nc https://dl.winehq.org/wine-builds/winehq.key
+  sudo apt-key add winehq.key
+  echo "deb https://dl.winehq.org/wine-builds/debian/ bullseye main" | sudo tee /etc/apt/sources.list.d/wine_chrome_os_made_simple.list
+  sudo apt update -y
+  sudo apt install --install-recommends winehq-stable winbind
+  winecfg
+  sudo apt install nemo
+  echo "Succsefully Completed!"
 ./InsEmu/main.sh
 elif [[ $ans1 -eq 2 ]]
 then
@@ -28,10 +28,26 @@ then
   echo "Go into your apps and open dolphin emulator!"
   ./InsEmu/main.sh
 elif [[ $ans1 -eq 3 ]]
+then
   sudo apt update
   sudo apt install flatpak
   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   sudo flatpak install flathub app.xemu.xemu
   sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
+  ./InsEmu/main.sh
+elif [[ $ans1 -eq U1 ]]
+then
+  echo "We do not have a way to uninstall this yet but we can deupdate it alot! We'll do that."
+  rm -rf ~/.wine
+  ./InsEmu/main.sh
+elif [[ $ans1 -eq U2 ]]
+then
+  sudo flatpak uninstall flathub org.DolphinEmu.dolphin-emu
+  echo "It will take a little while to update on your apps"
+  ./InsEmu/main.sh
+elif
+then
+  sudo flatpak uninstall flathub app.xemu.xemu
+  echo "It will take a little while to update on your apps"
   ./InsEmu/main.sh
 fi
