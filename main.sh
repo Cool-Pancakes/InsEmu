@@ -2,6 +2,7 @@ echo "Welcome to InsEmu"
 echo "What do you want to emulate?"
 echo "type 1 to emulate windows (.exe)"
 echo "type 2 to emulate wii/gamecube (.iso and .wad)"
+echo "type 3 to emulate xbox (?)
 echo -n ": "
 read ans1
 if [[ $ans1 -eq 1 ]]
@@ -25,7 +26,11 @@ then
   sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
   echo "Go into your apps and open dolphin emulator!"
   ./InsEmu/main.sh
-else [[ $ans1 -eq 3 ]]
-  echo "Please type one of the listed items"
+elif [[ $ans1 -eq 3 ]]
+  sudo apt update
+  sudo apt install flatpak
+  sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  sudo flatpak install flathub app.xemu.xemu
+  sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
   ./InsEmu/main.sh
 fi
