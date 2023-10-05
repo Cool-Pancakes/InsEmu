@@ -45,7 +45,7 @@ else [[ $ans1 -eq U1 ]]
 fi
 if [[ $ans1 -eq U2 ]]
 then
-  sudo flatpak uninstall flathub org.DolphinEmu.dolphin-emu
+  echo "type this in another tab: flatpak uninstall flathub org.DolphinEmu.dolphin-emu"
   echo "It will take a little while to update on your apps"
   ./InsEmu/main.sh
  
