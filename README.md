@@ -1,6 +1,6 @@
 # InsEmu
 
-Emulate all kinds of things!
+Emulate all kinds of files!
 
 
 
