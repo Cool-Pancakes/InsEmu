@@ -56,7 +56,7 @@ then
   ./InsEmu/main.sh
   
 else [[ $ans1 -eq U4 ]]
-then
+
   echo "Please say one of the listed items"
   ./InsEmu/main.sh
 fi
