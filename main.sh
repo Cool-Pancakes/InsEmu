@@ -16,14 +16,15 @@ winecfg
 sudo apt install nemo
 echo "Succsefully Completed!"
 ./InsEmu/main.sh
-else [[ $ans1 -eq 2 ]]
+elif [[ $ans1 -eq 2 ]]
+then
   sudo apt update
   sudo apt install flatpak
   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   sudo flatpak install flathub org.DolphinEmu.dolphin-emu
   sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
   ./InsEmu/main.sh
-elif [[ $ans1 -eq 3 ]]
+else [[ $ans1 -eq 3 ]]
   echo "Please type one of the listed items"
   ./InsEmu/main.sh
 fi
