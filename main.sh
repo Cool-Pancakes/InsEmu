@@ -52,4 +52,5 @@ then
   ./InsEmu/main.sh
 else
   echo "Please say one of the listed items"
+  ./InsEmu/main.sh
 fi
