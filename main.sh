@@ -45,9 +45,11 @@ then
   sudo flatpak uninstall flathub org.DolphinEmu.dolphin-emu
   echo "It will take a little while to update on your apps"
   ./InsEmu/main.sh
-elif
+elif [[ $ans1 -eq U3 ]]
 then
   sudo flatpak uninstall flathub app.xemu.xemu
   echo "It will take a little while to update on your apps"
   ./InsEmu/main.sh
+else
+  echo "Please say one of the listed items"
 fi
