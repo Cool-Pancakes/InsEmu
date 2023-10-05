@@ -23,6 +23,7 @@ then
   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   sudo flatpak install flathub org.DolphinEmu.dolphin-emu
   sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
+  echo "Go into your apps and open dolphin emulator!"
   ./InsEmu/main.sh
 else [[ $ans1 -eq 3 ]]
   echo "Please type one of the listed items"
