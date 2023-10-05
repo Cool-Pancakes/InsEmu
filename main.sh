@@ -1,7 +1,7 @@
 echo "Welcome to InsEmu"
 echo "What do you want to emulate?"
 echo "type 1 to emulate windows (.exe)"
-echo "type 2 to emulate wii/gamecube"
+echo "type 2 to emulate wii/gamecube (.iso and .wad)"
 echo -n ": "
 read ans1
 if [[ $ans1 -eq 1 ]]
