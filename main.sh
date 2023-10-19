@@ -35,3 +35,4 @@ else [[ $ans1 -eq 3 ]]
   sudo flatpak install flathub app.xemu.xemu
   sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
   ./InsEmu/main.sh
+fi
