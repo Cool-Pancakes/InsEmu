@@ -28,35 +28,10 @@ then
   echo "Go into your apps and open dolphin emulator!"
   ./InsEmu/main.sh
 
-elif [[ $ans1 -eq 3 ]]
-then
+else [[ $ans1 -eq 3 ]]
   sudo apt update
   sudo apt install flatpak
   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   sudo flatpak install flathub app.xemu.xemu
   sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
   ./InsEmu/main.sh
-
-elif [[ $ans1 -eq U1 ]]
-then
-  echo "We do not have a way to uninstall this yet but we can deupdate it alot! We'll do that."
-  rm -rf ~/.wine
-  ./InsEmu/main.sh
-
-elif [[ $ans1 -eq U2 ]]
-then
-  echo "type this in another tab: flatpak uninstall flathub org.DolphinEmu.dolphin-emu"
-  echo "It will take a little while to update on your apps"
-  ./InsEmu/main.sh
- 
-elif [[ $ans1 -eq U3 ]]
-then
-  sudo flatpak uninstall flathub app.xemu.xemu
-  echo "It will take a little while to update on your apps"
-  ./InsEmu/main.sh
-  
-else [[ $ans1 -eq U4 ]]
-
-  echo "Please say one of the listed items"
-  ./InsEmu/main.sh
-fi
