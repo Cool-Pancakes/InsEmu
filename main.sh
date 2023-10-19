@@ -41,5 +41,5 @@ then
 chmod 755 InsEmu/uninstall.sh
 ./InsEmu/uninstall.sh
 else [[ $ans1 -eq 5 ]]
-echo (Please enter one of the following)
+echo "Please enter one of the following"
 ./InsEmu/main.sh
