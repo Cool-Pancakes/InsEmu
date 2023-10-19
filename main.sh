@@ -28,11 +28,18 @@ then
   echo "Go into your apps and open dolphin emulator!"
   ./InsEmu/main.sh
 
-else [[ $ans1 -eq 3 ]]
+elif [[ $ans1 -eq 3 ]]
+then
   sudo apt update
   sudo apt install flatpak
   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   sudo flatpak install flathub app.xemu.xemu
   sudo chown root:root /usr/bin/bwrap && sudo chmod u+s /usr/bin/bwrap
   ./InsEmu/main.sh
-fi
+elif [[ $ans1 -eq 4 ]]
+then
+chmod 755 InsEmu/uninstall.sh
+./InsEmu/uninstall.sh
+else [[ $ans1 -eq 5 ]]
+echo (Please enter one of the following)
+./InsEmu/main.sh
