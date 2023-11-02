@@ -3,7 +3,7 @@ echo "What do you want to emulate?"
 echo "type 1 to emulate windows (.exe)"
 echo "type 2 to emulate wii/gamecube (.iso and .wad)"
 echo "type 3 to emulate xbox (.iso)"
-echo "Add a U to the start of the number Eg: U3 to uninstall instead of install"
+echo "type 4 to uninstall everything(beta)"
 echo -n ": "
 read ans1
 if [[ $ans1 -eq 1 ]]
@@ -38,9 +38,9 @@ then
   ./InsEmu/main.sh
 elif [[ $ans1 -eq 4 ]]
 then
-chmod 755 InsEmu/uninstall.sh
-./InsEmu/uninstall.sh
+   chmod 755 InsEmu/uninstall.sh
+   ./InsEmu/uninstall.sh
 else [[ $ans1 -eq 5 ]]
-echo "Please enter one of the following"
-./InsEmu/main.sh
+    echo "Please enter one of the following"
+    ./InsEmu/main.sh
 fi
